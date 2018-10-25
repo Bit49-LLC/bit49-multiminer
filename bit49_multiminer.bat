@@ -219,6 +219,7 @@ ECHO 156. TurtleCoin (TRTL)                         (cryptoknight)   AMD/NVIDIA/
 ECHO 157. Iridium (IRD)                             (cryptoknight)   AMD/NVIDIA/CPU XMR-Stak 2.5.0
 ECHO 158. Worktips (WTIP)                           (Worktipspool)   AMD/NVIDIA/CPU XMR-Stak 2.5.0
 ECHO 106. BBSCoin (BBS)                         (pool.bbscoin.xyz)   AMD/NVIDIA/CPU XMR-Stak 2.5.0
+ECHO 205. Plenteum (PLE)                         (ple.llama.horse)   AMD/NVIDIA/CPU XMR-Stak 2.5.0
 ECHO ========================================================================================================
 ECHO *                                      CryptoNight Heavy Algorithm                                     *
 ECHO ========================================================================================================
@@ -475,6 +476,7 @@ IF %M%==156 GOTO TRTL
 IF %M%==157 GOTO IRD
 IF %M%==158 GOTO WTIP
 IF %M%==106 GOTO BBS
+IF %M%==205 GOTO PLE
 ::CRYPTONIGHT HEAVY
 IF %M%==159 GOTO LOKI
 IF %M%==160 GOTO RYO
@@ -1900,6 +1902,20 @@ CLS
 ECHO BBSCoin (pool.bbscoin.xyz, cryptoknight.cc) AMD/NVIDIA/CPU XMR-Stak 2.5.0
 Miners\xmr-stak-2.5.0\xmr-stak -o pool.bbscoin.xyz:7777 -u %BBS% -p %MINER_NAME% -r %MINER_NAME% --currency bbscoin -c Miners\xmr-stak-2.5.0\BBS-config.txt -C Miners\xmr-stak-2.5.0\BBS-pools.txt --amd Miners\xmr-stak-2.5.0\BBS-amd.txt --nvidia Miners\xmr-stak-2.5.0\BBS-nvidia.txt --cpu Miners\xmr-stak-2.5.0\BBS-cpu.txt
 ::Miners\xmr-stak-2.5.0\xmr-stak -o bbs.ingest.cryptoknight.cc:19932 -u %BBS% -p %MINER_NAME% -r %MINER_NAME% --currency bbscoin -c Miners\xmr-stak-2.5.0\BBS-config.txt -C Miners\xmr-stak-2.5.0\BBS-pools.txt --amd Miners\xmr-stak-2.5.0\BBS-amd.txt --nvidia Miners\xmr-stak-2.5.0\BBS-nvidia.txt --cpu Miners\xmr-stak-2.5.0\BBS-cpu.txt
+IF %ERRORLEVEL% NEQ 0 GOTO exit
+PAUSE
+::
+:: Plenteum
+::
+:PLE
+DEL Miners\xmr-stak-2.5.0\PLE-pools.txt
+DEL Miners\xmr-stak-2.5.0\PLE-cpu.txt
+DEL Miners\xmr-stak-2.5.0\PLE-nvidia.txt
+DEL Miners\xmr-stak-2.5.0\PLE-amd.txt
+CLS
+ECHO Plenteum (ple.llama.horse, ple.cnhub.de) AMD/NVIDIA/CPU XMR-Stak 2.5.0
+Miners\xmr-stak-2.5.0\xmr-stak -o pool.llama.horse:10013 -u %PLE% -p %MINER_NAME% -r %MINER_NAME% --currency cryptonight_lite_v7 --noUAC -c Miners\xmr-stak-2.5.0\PLE-config.txt -C Miners\xmr-stak-2.5.0\PLE-pools.txt --amd Miners\xmr-stak-2.5.0\PLE-amd.txt --nvidia Miners\xmr-stak-2.5.0\PLE-nvidia.txt --cpu Miners\xmr-stak-2.5.0\PLE-cpu.txt
+::Miners\xmr-stak-2.5.0\xmr-stak -O ple.cnhub.de:4441 -u %PLE% -p %MINER_NAME% -r %MINER_NAME% --currency cryptonight_lite_v7 --noUAC -c Miners\xmr-stak-2.5.0\PLE-config.txt -C Miners\xmr-stak-2.5.0\PLE-pools.txt --amd Miners\xmr-stak-2.5.0\PLE-amd.txt --nvidia Miners\xmr-stak-2.5.0\PLE-nvidia.txt --cpu Miners\xmr-stak-2.5.0\PLE-cpu.txt
 IF %ERRORLEVEL% NEQ 0 GOTO exit
 PAUSE
 ::=====================================CRYPTONIGHT HEAVY======================================::
