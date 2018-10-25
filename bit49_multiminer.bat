@@ -1859,6 +1859,7 @@ CLS
 ECHO TurtleCoin (min2gether.com, cryptopool.space) AMD/NVIDIA/CPU XMR-Stak 2.5.0
 Miners\xmr-stak-2.5.0\xmr-stak -o trtl.pool.mine2gether.com:5555 -u %TRTL% -p %MINER_NAME% -r %MINER_NAME% --currency cryptonight_lite_v7 --noUAC -c Miners\xmr-stak-2.5.0\TRTL-config.txt -C Miners\xmr-stak-2.5.0\TRTL-pools.txt --amd Miners\xmr-stak-2.5.0\TRTL-amd.txt --nvidia Miners\xmr-stak-2.5.0\TRTL-nvidia.txt --cpu Miners\xmr-stak-2.5.0\TRTL-cpu.txt
 ::Miners\xmr-stak-2.5.0\xmr-stak -O pool.trtl.cryptopool.space:443 -u %TRTL% -p %MINER_NAME% -r %MINER_NAME% --currency cryptonight_lite_v7 --noUAC -c Miners\xmr-stak-2.5.0\TRTL-config.txt -C Miners\xmr-stak-2.5.0\TRTL-pools.txt --amd Miners\xmr-stak-2.5.0\TRTL-amd.txt --nvidia Miners\xmr-stak-2.5.0\TRTL-nvidia.txt --cpu Miners\xmr-stak-2.5.0\TRTL-cpu.txt
+::Miners\xmr-stak-2.5.0\xmr-stak -O turtle.imhard4.men:3333 -u %TRTL% -p %MINER_NAME% -r %MINER_NAME% --currency cryptonight_lite_v7 --noUAC -c Miners\xmr-stak-2.5.0\TRTL-config.txt -C Miners\xmr-stak-2.5.0\TRTL-pools.txt --amd Miners\xmr-stak-2.5.0\TRTL-amd.txt --nvidia Miners\xmr-stak-2.5.0\TRTL-nvidia.txt --cpu Miners\xmr-stak-2.5.0\TRTL-cpu.txt
 IF %ERRORLEVEL% NEQ 0 GOTO exit
 PAUSE
 ::
